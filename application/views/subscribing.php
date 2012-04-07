@@ -5,8 +5,9 @@
 	<head>
 		<meta name="author" content="Sirius Dely">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css" media="screen"
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/subscribe.css" media="screen"
 			title="no title" charset="utf-8">
+		<link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon" />
 		<title>Christian Life Community - Indonesia</title>
 	</head>
 	<body>
