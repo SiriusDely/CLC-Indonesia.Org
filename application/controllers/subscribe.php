@@ -10,7 +10,7 @@ class Subscribe extends Controller {
 
 	function index() {
 
-		$this->load->view('subscribing');
+		$this->load->view('subscribe');
 
 	}
 
@@ -22,7 +22,7 @@ class Subscribe extends Controller {
 
 		if($this->form_validation->run() == FALSE)
 		{
-			$this->load->view('subscribing');
+			$this->load->view('subscribe');
 		}
 		else
 		{
@@ -33,20 +33,19 @@ class Subscribe extends Controller {
 			$this->load->model('subscriber');
 			$this->subscriber->create();
 
-			$this->load->library('email');
-			$this->email->set_newline("\r\n");
-			$this->email->from('Sirius Dely', 'rious.delie@gmail.com');
-			$this->email->to($email);
-			$this->email->subject('[CLC-Indonesia.Org] Nantikan kabar selanjutnya.');
-			$this->email->message('Halo, '.$_POST['name'].'! Alamat email kamu ('.$_POST['email'].') sudah tersimpan. Nantikan kabar selanjutnya dari CLC-Indonesia.Org.');
-
-			if($this->email->send()) {
-				$this->load->view('subscribing');
+			$to = $email;
+			$subject = '[CLC-Indonesia.Org] Nantikan kabar selanjutnya.';
+			$body = 'Halo, '.$_POST['name'].'!'."\r\n\r\n".
+					'Alamat email kamu ('.$_POST['email'].') sudah tersimpan.'."\r\n".
+					'Nantikan kabar selanjutnya dari CLC-Indonesia.Org.'."\r\n\r\n".
+					'Salam :)';
+    		if (mail($to, $subject, $body)) {
+				$this->load->view('subscribe');
 				print '<script type="text/javascript">'; 
-				print 'alert("Halo, '.$_POST['name'].'! \nAlamat email kamu ('.$_POST['email'].') sudah tersimpan. \nNantikan kabar selanjutnya dari CLC-Indonesia.Org.")'; 
+				print 'alert("Halo, '.$_POST['name'].'! \nAlamat email kamu ('.$_POST['email'].') sudah tersimpan. \nNantikan kabar selanjutnya dari CLC-Indonesia.org.")'; 
 				print '</script>';
 			} else {
-				$this->load->view('subscribing');
+				$this->load->view('subscribe');
 				print '<script type="text/javascript">'; 
 				print 'alert("Halo, '.$_POST['name'].'! \nAlamat email kamu belum bisa didaftarkan. \nMohon dicoba lagi.")'; 
 				print '</script>';

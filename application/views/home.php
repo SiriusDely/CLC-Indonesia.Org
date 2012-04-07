@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css" media="screen"
 		title="no title" charset="utf-8">
 	<link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon" />
-	<title>CLC-Indonesia.org</title>
+	<title>Christian Life Community - Indonesia</title>
 </head>
 <body>
 	<div id="wrapper">
@@ -18,9 +18,16 @@
 		<!-- start menu -->
 		<?php $this->load->view('menu') ?>
 		<!-- end menu -->
-		<!-- start right -->
-		<?php $this->load->view('right') ?>
-		<!-- end right -->
+        <div id="page">
+			<!-- start right -->
+			<?php $this->load->view('right') ?>
+			<!-- end right -->
+	        <div id="content">
+				<!-- start newsletter -->
+				<?php $this->load->view('newsletter') ?>
+				<!-- end newsletter -->
+	        <div id="content">
+		</div>
 	</div>
 </body>
 </html>
