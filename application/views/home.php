@@ -24,7 +24,7 @@
 			<!-- end right -->
 	        <div id="content">
 				<!-- start newsletter -->
-				<?php $this->load->view('newsletter') ?>
+				<?php $this->load->view('clc') ?>
 				<!-- end newsletter -->
 	        <div id="content">
 		</div>
