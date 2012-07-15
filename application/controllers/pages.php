@@ -17,6 +17,18 @@ class Pages extends CI_Controller {
         $this->load->view('template', $data);
     }
 
+    function articles() {
+        $data['page'] = 'pages/articles';
+        $data['uri'] = 'pages/articles';
+        $this->load->view('template', $data);
+    }
+
+    function events() {
+        $data['page'] = 'pages/events';
+        $data['uri'] = 'pages/events';
+        $this->load->view('template', $data);
+    }
+
     function about() {
         $data['page'] = 'pages/about';
         $data['uri'] = 'pages/about';
