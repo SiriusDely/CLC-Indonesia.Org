@@ -13,11 +13,19 @@ class Pages extends CI_Controller {
 
     function home() {
         $data['page'] = 'pages/home';
+        $data['uri'] = 'pages/home';
+        $this->load->view('template', $data);
+    }
+
+    function about() {
+        $data['page'] = 'pages/about';
+        $data['uri'] = 'pages/about';
         $this->load->view('template', $data);
     }
 
     function contacts() {
         $data['page'] = 'pages/contacts';
+        $data['uri'] = 'pages/contacts';
         $this->load->view('template', $data);
     }
 

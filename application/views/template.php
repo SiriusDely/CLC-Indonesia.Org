@@ -13,7 +13,7 @@
         <?php $this->load->view('header') ?>
         <!-- end header -->
         <!-- start menu -->
-        <?php $this->load->view('menu', $page) ?>
+        <?php $this->load->view('menu', $uri) ?>
         <!-- end menu -->
             <!-- start page -->
             <div id="page">
@@ -24,14 +24,15 @@
                     <?php else: ?>
                     <?php $this->load->view('error_page'); ?>
                     <?php endif; ?>
-                        </div>
-                        <!-- end content -->
-                        <!-- start sidebars -->
+                </div>
+                 <!-- end content -->
+                <!-- start sidebars -->
                 <?php $this->load->view('right') ?>
-                            <!-- end sidebars -->
-                            <div style="clear: both;">&nbsp;</div>
-                        </div>
-                        <!-- end page -->
-                    </div>
+                <!-- end sidebars -->
+                <div style="clear: both;">&nbsp;
+                </div>
+            </div>
+            <!-- end page -->
+        </div>
     </body>
 </html>
