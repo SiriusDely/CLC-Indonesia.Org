@@ -16,7 +16,7 @@ Released   : 20090303
         <title>Premium Series by Free CSS Templates</title>
         <meta name="keywords" content="" />
         <meta name="Premium Series" content="" />
-        <link href="<?php echo base_url() ?>public/css/default.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="<?php echo base_url() ?>public/css/style.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
     <body>
         <!-- start header -->
