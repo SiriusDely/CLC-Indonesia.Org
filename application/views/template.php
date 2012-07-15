@@ -33,6 +33,5 @@
                         </div>
                         <!-- end page -->
                     </div>
-        <?php $this->load->view('footer') ?>
     </body>
 </html>
