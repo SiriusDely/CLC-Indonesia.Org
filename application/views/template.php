@@ -13,7 +13,7 @@
         <?php $this->load->view('header') ?>
         <!-- end header -->
         <!-- start menu -->
-        <?php $this->load->view('menu') ?>
+        <?php $this->load->view('menu', $page) ?>
         <!-- end menu -->
             <!-- start page -->
             <div id="page">

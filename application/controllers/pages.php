@@ -12,12 +12,12 @@ class Pages extends CI_Controller {
     }
 
     function home() {
-        $data['page'] = 'pages/clc';
+        $data['page'] = 'pages/home';
         $this->load->view('template', $data);
     }
 
-    function contact() {
-        $data['page'] = 'pages/contact';
+    function contacts() {
+        $data['page'] = 'pages/contacts';
         $this->load->view('template', $data);
     }
 
