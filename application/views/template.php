@@ -22,7 +22,7 @@
                     <?php if (!empty($page)): ?>
                     <?php $this->load->view($page); ?> 
                     <?php else: ?>
-                    <?php $this->load->view('error_page'); ?>
+                    <?php $this->load->view('error'); ?>
                     <?php endif; ?>
                 </div>
                  <!-- end content -->
