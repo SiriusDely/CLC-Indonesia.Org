@@ -31,8 +31,6 @@ class Clcers extends CI_Controller {
                     'type' => $login_data['type'],
                     'is_login' => TRUE
                 );
-
-
                 $this->session->set_userdata($session_data);
                 if ($this->session->userdata('type') == 'admin') {
                     redirect('admin/pages/index');
@@ -44,7 +42,9 @@ class Clcers extends CI_Controller {
                 redirect('clcers/login');
             }
         }
-        $this->load->view('clcers/login');
+        $data['page'] = 'clcers/login';
+        $data['uri'] = '/login';
+        $this->load->view('template', $data);
     }
 
     function dashboard() {

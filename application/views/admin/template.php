@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Admin Panel Sekolahku</title>
+        <title>Admin Panel CLC Indonesia</title>
         <meta name="keywords" content="" />
         <meta name="Premium Series" content="" />
 
@@ -29,7 +29,7 @@
             <tr>
                 <td>
                     <hr/>
-                    Admin Panel Sekolahku
+                    Admin Panel CLC Indonesia
                 </td>
             </tr>
         </table>

@@ -15,7 +15,6 @@ class Pages extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-
         $this->general->checkAdmin(); // Pengecekan Hak Akses Admin, jika bukan Admin maka akan diredirect ke form Login
 
         $this->load->model('Pages_model');

@@ -1,4 +1,4 @@
-<h2>Login User</h2>
+<h2>Login CLCers</h2>
 <hr/>
 <?php if ($this->session->flashdata('success')): ?>
     <?php echo $this->session->flashdata('success'); ?>

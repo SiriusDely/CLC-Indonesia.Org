@@ -62,28 +62,28 @@ class General {
     function checkAdmin() {
         if (($this->isLogin() && $this->isAdmin()) != TRUE) {
             $this->ci->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses sebagai admin');
-            redirect('users/login');
+            redirect('clcers/login');
         }
     }
 
     function checkTeacher() {
         if (($this->isLogin() && $this->isTeacher()) != TRUE) {
             $this->ci->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses sebagai guru');
-            redirect('users/login');
+            redirect('clcers/login');
         }
     }
 
     function checkStudent() {
         if (($this->isLogin() && $this->isStudent()) != TRUE) {
             $this->ci->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses sebagai siswa');
-            redirect('users/login');
+            redirect('clcers/login');
         }
     }
 
     function checkAlumni() {
         if (($this->isLogin() && $this->isAlumni()) != TRUE) {
             $this->ci->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses sebagai alumni');
-            redirect('users/login');
+            redirect('clcers/login');
         }
     }
 
