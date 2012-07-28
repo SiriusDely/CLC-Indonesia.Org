@@ -15,6 +15,7 @@
                 <h2>Admin Panel</h2>
                 <?php echo anchor('admin/pages', 'Pages') ?> |
                 <?php echo anchor('admin/categories', 'Categories') ?> |
+                <?php echo anchor('admin/posts', 'Posts') ?> |
                 <?php echo anchor('clcers/logout', 'Logout') ?> 
                 <?php if (!empty($content)): ?>
                     <?php $this->load->view($content); ?>

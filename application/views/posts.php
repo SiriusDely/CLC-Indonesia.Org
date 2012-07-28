@@ -1,4 +1,15 @@
-<?php foreach ($posts as $post_item): ?>
-	<?php echo '<h2>'.$post_item['title'].'</h2>' ?>
-	<?php echo '<p>'.$post_item['body'].'</p>' ?>
-<?php endforeach ?>
+<?php if (!empty($posts)): ?>
+	<?php foreach ($posts as $post): ?>
+	<div>
+		<h1><a href="<?php echo site_url('posts/detail/' . $post['permalink']); ?>"><?php echo $post['title'] ?></a></h1>
+		<p><small><?php echo $post['created']; ?> by <a href="#"><?php echo $post['username']; ?></a></small></p>
+		<div>
+			<?php if (!empty($post['image'])): ?>
+				<img src="<?php echo base_url() . $post['image'] ?>" width="510" height="250"/>
+			<?php endif; ?>
+			<?php echo word_limiter($post['body'], 30); ?><br/>
+			<?php echo anchor('posts/detail/' . $post['permalink'], 'baca selengkapnya..'); ?>
+		</div>
+	</div>
+	<?php endforeach; ?>
+<?php endif; ?>

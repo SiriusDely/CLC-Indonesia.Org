@@ -38,9 +38,9 @@
 |
 */
 
-$route['default_controller'] = 'pages/home';
+$route['default_controller'] = 'posts/home';
 $route['404_override'] = 'pages/error';
-$route['home'] = 'pages/home';
+$route['home'] = 'posts/home';
 $route['articles'] = 'posts/articles';
 $route['events'] = 'posts/events';
 $route['about'] = 'pages/about';

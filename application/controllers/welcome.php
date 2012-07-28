@@ -7,9 +7,8 @@ class Welcome extends CI_Controller {
     }
 
     function index() {
-        $data['page'] = 'pages/home';
-        $data['uri'] = '/home';
-        $this->load->view('template', $data);
+        //$this->load->view('welcome_message');
+        redirect('home');
     }
 
 }
