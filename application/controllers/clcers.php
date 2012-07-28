@@ -9,7 +9,7 @@ class Clcers extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('Clcers_model');
+        $this->load->model('clcers_model');
     }
 
     function login() {
@@ -23,7 +23,7 @@ class Clcers extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
-            $login_data = $this->Clcers_model->check_clcer_login($username, $password);
+            $login_data = $this->clcers_model->check_clcer_login($username, $password);
             if ($login_data) {
                 $session_data = array(
                     'id' => $login_data['id'],

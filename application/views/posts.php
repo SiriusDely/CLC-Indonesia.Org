@@ -1,7 +1,7 @@
 <?php if (!empty($posts)): ?>
 	<?php foreach ($posts as $post): ?>
 	<div>
-		<h1><a href="<?php echo site_url('posts/detail/' . $post['permalink']); ?>"><?php echo $post['title'] ?></a></h1>
+		<h2><a href="<?php echo site_url('posts/detail/' . $post['permalink']); ?>"><?php echo $post['title'] ?></a></h2>
 		<p><small><?php echo $post['created']; ?> by <a href="#"><?php echo $post['username']; ?></a></small></p>
 		<div>
 			<?php if (!empty($post['image'])): ?>

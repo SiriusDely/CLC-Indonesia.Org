@@ -1,7 +1,7 @@
 <?php if (!empty($post)): ?>
 
 	<div>
-		<h1><?php echo $post['title'] ?></h1>
+		<h2><?php echo $post['title'] ?></h2>
 		<p><small><?php echo $post['created']; ?></small></p>
 		<div>
 			<?php if (!empty($post['image'])): ?>
