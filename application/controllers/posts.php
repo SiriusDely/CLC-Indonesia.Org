@@ -12,6 +12,16 @@ class Posts extends CI_Controller {
 		$this->load->model('posts_model');
 	}
 
+	function detail($permalink = null) {
+		if ($permalink == null) {
+			redirect('home');
+		}
+		$data['post'] = $this->posts_model->findByPermalink($permalink);
+		$data['page'] = 'post';
+		$data['uri'] = '';
+		$this->load->view('template', $data);
+	}
+
 	function home() {
 		$data['posts'] = $this->posts_model->findActive(5);
 		$data['page'] = 'posts';
