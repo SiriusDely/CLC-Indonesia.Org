@@ -1,3 +1,6 @@
+<?php
+echo initialize_tinymce();
+?>
 <h3>Edit Page</h3><br/>
 <?php echo validation_errors(); ?>
 <?php echo form_open('admin/pages/edit'); ?>

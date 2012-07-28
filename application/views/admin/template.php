@@ -1,37 +1,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Admin Panel CLC Indonesia</title>
-        <meta name="keywords" content="" />
-        <meta name="Premium Series" content="" />
+<head>
+    <meta name="author" content="Sirius Dely">
+    <link href="<?php echo base_url() ?>public/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Admin Panel CLC Indonesia</title>
 
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <h2>Admin Panel</h2>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php echo anchor('admin/pages', 'Pages') ?> | <?php echo anchor('clcers/logout', 'Logout') ?> 
-                    <hr/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <?php if (!empty($content)): ?>
-                        <?php $this->load->view($content); ?>
-                    <?php endif; ?>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <hr/>
-                    Admin Panel CLC Indonesia
-                </td>
-            </tr>
-        </table>
-    </body>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="page">
+            <!-- start content -->
+            <div id="content">
+                <h2>Admin Panel</h2>
+                <?php echo anchor('admin/pages', 'Pages') ?> |
+                <?php echo anchor('admin/categories', 'Categories') ?> |
+                <?php echo anchor('clcers/logout', 'Logout') ?> 
+                <?php if (!empty($content)): ?>
+                    <?php $this->load->view($content); ?>
+                <?php endif; ?>
+
+                <p>Admin Panel CLC Indonesia</p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
