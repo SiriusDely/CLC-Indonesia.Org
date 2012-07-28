@@ -21,13 +21,6 @@ class Posts extends CI_Controller {
 		$this->load->model('categories_model');
 	}
 
-	function indexOld() {
-		$data['posts'] = $this->posts_model->get_last_ten_entries();
-		$data['page'] = 'posts';
-		$data['uri'] = '/articles';
-		$this->load->view('template', $data);
-	}
-
 	function index($page = null) {
 
 		$this->load->library('pagination');
@@ -54,64 +47,6 @@ class Posts extends CI_Controller {
 		$this->load->view($this->template, $data);
 	}
 
-	function articles($page = null) {
-
-		$this->load->library('pagination');
-		$config['uri_segment'] = 4;
-		$config['total_rows'] = $this->posts_model->countAll();
-		$config['per_page'] = 10;
-		$config['base_url'] = base_url() . 'admin/posts/index/';
-
-		if ($this->input->get('q')):
-			$q = $this->input->get('q');
-		$data['posts'] = $this->posts_model->findAll($config['per_page'], $this->uri->segment(4), $q);
-		if (empty($data['posts'])) {
-			$this->session->set_flashdata('error', 'Data tidak ditemukan');
-			redirect('admin/posts/index');
-		}
-		$config['total_rows'] = count($data['posts']);
-		else:
-			$data['posts'] = $this->posts_model->findAll($config['per_page'], $this->uri->segment(4));
-		endif;
-		$this->pagination->initialize($config);
-		$data['status'] = $this->status;
-		$data['pagination'] = $this->pagination->create_links();
-		$data['content'] = 'admin/posts/index';
-		//$this->load->view($this->template, $data);
-		$data['page'] = 'posts';
-		$data['uri'] = '/articles';
-		$this->load->view('template', $data);
-	}
-
-	function events($page = null) {
-
-		$this->load->library('pagination');
-		$config['uri_segment'] = 4;
-		$config['total_rows'] = $this->posts_model->countAll();
-		$config['per_page'] = 10;
-		$config['base_url'] = base_url() . 'admin/posts/index/';
-
-		if ($this->input->get('q')):
-			$q = $this->input->get('q');
-		$data['posts'] = $this->posts_model->findAll($config['per_page'], $this->uri->segment(4), $q);
-		if (empty($data['posts'])) {
-			$this->session->set_flashdata('error', 'Data tidak ditemukan');
-			redirect('admin/posts/index');
-		}
-		$config['total_rows'] = count($data['posts']);
-		else:
-			$data['posts'] = $this->posts_model->findAll($config['per_page'], $this->uri->segment(4));
-		endif;
-		$this->pagination->initialize($config);
-		$data['status'] = $this->status;
-		$data['pagination'] = $this->pagination->create_links();
-		$data['content'] = 'admin/posts/index';
-		//$this->load->view($this->template, $data);
-		$data['page'] = 'posts';
-		$data['uri'] = '/events';
-		$this->load->view('template', $data);
-	}
-
 	function add() {
 
 		$this->form_validation->set_rules('title', 'title', 'required|xss_clean');
@@ -125,9 +60,9 @@ class Posts extends CI_Controller {
 				'title' => $this->input->post('title'),
 				'permalink' => url_title($this->input->post('title')),
 				'body' => $this->input->post('body'),
-				'Q_id' => $this->input->post('categories_id'),
+				'categories_id' => $this->input->post('categories_id'),
 				'status' => $this->input->post('status'),
-				'users_id' => $this->session->userdata('id'),
+				'clcers_id' => $this->session->userdata('id'),
 				'created' => date("Y-m-d H:i:s")
 				);
 			if ($_FILES['image']['error'] != 4) {
@@ -170,7 +105,7 @@ class Posts extends CI_Controller {
 				'body' => $this->input->post('body'),
 				'categories_id' => $this->input->post('categories_id'),
 				'status' => $this->input->post('status'),
-				'users_id' => $this->session->userdata('id'),
+				'clcers_id' => $this->session->userdata('id'),
 				'created' => date("Y-m-d H:i:s")
 				);
 			if ($_FILES['image']['error'] != 4) {
