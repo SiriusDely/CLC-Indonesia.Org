@@ -81,6 +81,7 @@
 }
 
 #content {
+	border-top: 3px solid #000066;
 	float: left;
 	width: 690px;
 	margin: 0px 0px 0px -10px;
@@ -90,6 +91,10 @@
 
 #content h2 {
 	color: #000066;
+}
+
+#content a {
+	text-decoration: none;
 }
 
 blockquote {
@@ -147,6 +152,15 @@ table.table2 {
 	padding: 1px 1px 1px 1px;
 }
 
+img{
+    width: 500px; /* you can use % */
+    height: auto;
+}
+
+#post {
+	border-bottom: 3px solid #000066;
+}
+
 .error {
 	color: #660000;
 	font-style: italic;
@@ -182,4 +196,29 @@ table.table2 {
 	float: right;
 	width: 300px;
 	padding: 0;
+	border-top: 3px solid #000066;
+	border-bottom: 3px solid #000066;
 }
+
+#facebook_div {
+	border-bottom: 3px solid #000066;
+}
+
+#twitter_div {
+	font-family: Georgia, Serif;
+	text-align: justify;
+	font-size: 13px;
+	padding: 0px 0px 0px 0px;
+}
+
+#twitter_div a {
+	text-decoration: none;
+}
+
+#twitter_div ul {
+	list-style-type: none;
+	padding: 0px 0px 0px 10px;
+}
+#twitter_div li {border-bottom:2px solid #999999}
+#twitter_div li a {color:black;display:block;margin-bottom:5px;font-weight:bold}
+#twitter_div li span a {color:#002288;display:inline;margin-bottom:0px;font-weight:bold}

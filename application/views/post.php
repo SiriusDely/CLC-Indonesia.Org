@@ -5,7 +5,7 @@
 		<p><small><?php echo $post['created']; ?></small></p>
 		<div>
 			<?php if (!empty($post['image'])): ?>
-				<img src="<?php echo base_url() . $post['image'] ?>" width="510" height="250"/>
+				<img src="<?php echo base_url() . $post['image'] ?>"/>
 			<?php endif; ?>
 			<?php echo $post['body'] ?><br/>
 
